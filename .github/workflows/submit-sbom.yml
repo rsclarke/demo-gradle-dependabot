@@ -1,8 +1,9 @@
 name: submit-sbom
 
 on:
-  workflow_run: ['build']
-  types: [completed]
+  workflow_run: 
+    workflows: [build]
+    types: [completed]
 
 jobs:
   submit-dependency-graph:
