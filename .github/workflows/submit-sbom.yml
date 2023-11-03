@@ -8,6 +8,8 @@ on:
 jobs:
   submit-dependency-graph:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Retrieve dependency graph artifact and submit
       uses: gradle/gradle-build-action@v2
