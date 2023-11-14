@@ -1,10 +1,13 @@
 name: review
 
 on:
-  pull_request:
+  workflow_run: 
+    workflows: ['submit-sbom']
+    types: [completed]
 
 jobs:
   review:
+    if: ${{ github.event.workflow_run.event == 'pull_request' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
