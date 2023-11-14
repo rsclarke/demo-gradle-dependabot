@@ -9,7 +9,7 @@ jobs:
   debug:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ toJson(github.event) }}
+      - run: echo "${{ toJson(github.event) }}"
   review:
     if: ${{ github.event.workflow_run.event == 'pull_request' }}
     runs-on: ubuntu-latest
