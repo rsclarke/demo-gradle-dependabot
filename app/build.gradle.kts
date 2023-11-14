@@ -29,7 +29,7 @@ dependencies {
     // This dependency is used by the application.
     implementation("com.google.guava:guava:32.1.3-jre")
 
-    implementation("org.apache.logging.log4j:log4j-core:2.12.1")
+    implementation("org.apache.logging.log4j:log4j-core:2.12.2")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
